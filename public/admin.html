@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - App Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔐 Admin Panel</h1>
+            <p>Manage your app store</p>
+            <div class="admin-nav">
+                <a href="/index.html" class="nav-link">View Store</a>
+                <button id="logoutBtn" class="logout-btn" style="display: none;">Logout</button>
+            </div>
+        </header>
+
+        <!-- Login Form -->
+        <div id="loginSection" class="login-section">
+            <div class="login-box">
+                <h2>Admin Login</h2>
+                <form id="loginForm">
+                    <input type="text" id="username" placeholder="Username" required autocomplete="username">
+                    <input type="password" id="password" placeholder="Password" required autocomplete="current-password">
+                    <button type="submit">Login</button>
+                </form>
+                <p id="loginError" class="error-message"></p>
+            </div>
+        </div>
+
+        <!-- Admin Content (hidden until logged in) -->
+        <div id="adminContent" style="display: none;">
+            <!-- Add App Form -->
+            <div class="add-app-section">
+                <h2>Add New App</h2>
+                <form id="addAppForm">
+                    <input type="text" id="appName" placeholder="App Name" required>
+                    <input type="url" id="appIcon" placeholder="Icon URL (optional)">
+                    <input type="url" id="downloadLink" placeholder="Download Link" required>
+                    <button type="submit">Add App</button>
+                </form>
+            </div>
+
+            <!-- Apps Management -->
+            <div class="apps-section">
+                <h2>Manage Apps</h2>
+                <div id="appsGrid" class="apps-grid">
+                    <p class="loading">Loading apps...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+node_modules/
+apps.db
+apps.db-journal
+.env
